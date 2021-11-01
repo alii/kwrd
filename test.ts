@@ -1,5 +1,3 @@
-// Okay
-// import assert from 'assert';
 import {match} from './src';
 
 const keys = '+one, +three, -two';
