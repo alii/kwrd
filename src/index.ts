@@ -41,7 +41,7 @@ export class Keyword {
  * @param strict Whether to enable strict mode. Refer to GitHub for strict mode documentation
  * @returns boolean
  */
-export function match(rawKeywords: string, rawName: string, strict: boolean) {
+export function match(rawKeywords: string, rawName: string, strict = false) {
 	const keywords = rawKeywords.split(',').map(Keyword.from);
 
 	const name = rawName.trim().toLowerCase();
@@ -70,3 +70,5 @@ export function match(rawKeywords: string, rawName: string, strict: boolean) {
 
 	return mapped.some(([isPos, didMatch]) => isPos && didMatch);
 }
+
+export default match;
